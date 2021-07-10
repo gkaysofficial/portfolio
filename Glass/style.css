@@ -14,6 +14,12 @@ body {
     background-color: rgb(75, 43, 191);
 }
 
+.name {
+    border: 5px outset red;
+    background-color: lightblue;
+    text-align: center;
+}
+
 body::before {
     content: "";
     position: absolute;
