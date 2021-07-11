@@ -1,0 +1,123 @@
+@import url('https://font.google.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #000;
+}
+
+.box-2 {
+    position: relative;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: 0.5s ease;
+    background: #060c21;
+}
+
+.box-2:hover {
+    height: 400px;
+}
+
+.imgboxx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.imgboxx img {
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.box-2:hover .imgboxx img {
+    opacity: 1;
+}
+
+.box-2:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box-2:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box-2:before,
+.box-2:after {
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box-2:nth-child(2):before,
+.box-2:nth-child(2):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box-2:nth-child(3):before,
+.box-2:nth-child(3):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box-2 .content-2 {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box-2:hover .content-2 {
+    opacity: 1;
+}
+
+.box-2 .content-2 h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.box-2 .content-2 h2 span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
