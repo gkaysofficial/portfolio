@@ -1,9 +1,8 @@
 const xhr = new XMLHttpRequest();
 let city = "in"
 let con = document.getElementById('con');
-apiKey: "d8e22821b19f4f3d828dd4a7f974e7f2",
 
-    xhr.open('GET', ' https://newsapi.org/v2/top-headlines?country=in&apiKey=d8e22821b19f4f3d828dd4a7f974e7f2', true);
+xhr.open('GET', ' https://newsapi.org/v2/top-headlines?country=in&apiKey=d8e22821b19f4f3d828dd4a7f974e7f2', true);
 
 xhr.onload = function() {
 
