@@ -29,14 +29,15 @@ xhr.onload = function() {
             
 
         </div>`;
-            con.innerHTML += news;
+            con += news;
 
         });
+        con.innerHTML = con;
 
 
     } else {
         console.log("Some Error Eccored");
     }
 
-}
+};
 xhr.send()
