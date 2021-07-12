@@ -12,13 +12,14 @@ xhr.onload = function() {
         let newshtml = "";
         articles.forEach(function(element, index) {
 
-            let news = `<h2 class="accordion-header" id="flush-headingOne${index}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne${index}" aria-expanded="false" aria-controls="flush-collapseOne${index}">
-         <b>New ${index=1} :</b>${element["title"]}
+            let news = ` <div class="accordion accordion-flush" id="accordionFlushExample">
+            <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+         ${element["title"]} <b>News Fetched by :-${element["author"]}</b>
         </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">${element["content"]}. <a href="${element['url']}" target="_blank" >Read more here</a></div>
+            <div class="accordion-body">${element["description"]}. <a href="${element['url']}" target="_blank" >Read more here</a></div>
         </div>
     </div>`;
             accordionnews += news;
