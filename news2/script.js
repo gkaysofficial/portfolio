@@ -1,23 +1,6 @@
-window.onscroll = function() { myFunction() };
-
-// Get the navbar
-var navbar = document.getElementById("navbar-1");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky-1")
-    } else {
-        navbar.classList.remove("sticky-1");
-    }
-}
-const xhr = new XMLHttpRequest();
 let city = "in"
-let accordionnews = document.getElementById('accordionnews');
-
+let accordionnew = document.getElementById('accordionFlushExample');
+const xhr = new XMLHttpRequest();
 xhr.open('GET', ' https://newsapi.org/v2/top-headlines?country=in&apiKey=d8e22821b19f4f3d828dd4a7f974e7f2', true);
 
 xhr.onload = function() {
@@ -38,10 +21,10 @@ xhr.onload = function() {
             <div class="accordion-body">${element["content"]}. <a href="${element['url']}" target="_blank" >Read more here</a></div>
         </div>
     </div>`;
-            accordionnews.innerHTML += news;
+            accordionnews += news;
 
         });
-        accordionnews.innerHTML = accordionnews;
+        accordionFlushExample.innerHTML = accordionnews;
 
     } else {
         console.log("Some Error Eccored");

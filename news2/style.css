@@ -35,11 +35,12 @@
                 width: 100%;
             }
             
-            .sticky-1+.content {
+            .sticky-1.content {
                 padding-top: 60px;
             }
             
             .text {
+                text-align: center;
                 font-size: 40px;
                 font-family: 'Bebas Neue', cursive;
                 font-weight: 500;
@@ -103,8 +104,14 @@
             .homesec {
                 width: 1200px;
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 height: 550px;
                 background-color: burlywood;
+            }
+            
+            .smallcards {
+                display: flex;
             }
             
             .home-1 {
@@ -129,7 +136,7 @@
             .topheadlines {
                 margin-top: 20px;
                 text-align: center;
-                color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
                 font-family: 'Anton', sans-serif;
                 letter-spacing: 3px;
                 font-size: 30px;
