@@ -152,60 +152,6 @@ header .navbar a:hover {
     animation: float 3s linear infinite;
 }
 
-.speciality .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.speciality .box-container .box {
-    flex: 1 1 30rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
-    border: .1rem solid rgba(0, 0, 0, .3);
-    cursor: pointer;
-    border-radius: .5rem;
-}
-
-.speciality .box-container .box .image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: -100%;
-    left: 0;
-}
-
-.speciality .box-container .box .content {
-    text-align: center;
-    background: #fff;
-    padding: 2rem;
-}
-
-.speciality .box-container .box .content img {
-    margin: 1.5rem 0;
-}
-
-.speciality .box-container .box .content h3 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-.speciality .box-container .box .content p {
-    font-size: 1.6rem;
-    color: #666;
-    padding: 1rem 0;
-}
-
-.speciality .box-container .box:hover .image {
-    top: 0;
-}
-
-.speciality .box-container .box:hover .content {
-    transform: translateY(100%);
-}
-
 @keyframes float {
     0%,
     100% {
@@ -279,6 +225,56 @@ header .navbar a:hover {
 
 .speciality .box-container .box:hover .content {
     transform: translateY(100%);
+}
+
+
+/* Popular sectin styling */
+
+.popular .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.popular .box-container .box {
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+    position: relative;
+}
+
+.popular .box-container .box img {
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.popular .box-container .box .price {
+    position: absolute;
+    top: 3rem;
+    left: 3em;
+    background: var(--red);
+    color: #fff;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.popular .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.popular .box-container .box .stars i {
+    color: gold;
+    font-size: 1.7rem;
+    padding: 1rem .1rem;
 }
 
 
